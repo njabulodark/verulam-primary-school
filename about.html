@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Verulam Primary School</title>
+    <meta name="description" content="Learn about Verulam Primary School - a Quintile 4 public primary school in Brindhaven, Verulam, KwaZulu-Natal, South Africa.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-primary': '#2E5C55',
+                        'brand-accent': '#D4A574',
+                        'brand-sage': '#8FBC8F',
+                        'brand-terracotta': '#C07A5A',
+                        'brand-dark': '#0F172A',
+                        'brand-cream': '#FDF8F5',
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom-container img { transition: transform 0.7s ease; }
+        .img-zoom-container:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="text-brand-dark antialiased bg-brand-cream">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-lg shadow-lg">
+        <div class="container mx-auto px-6 lg:px-12 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="group flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-sage text-white flex items-center justify-center font-serif font-bold text-xl rounded-lg shadow-md">
+                        V</div>
+                    <div>
+                        <span class="font-serif text-xl font-bold block text-brand-dark">Verulam Primary</span>
+                        <span class="text-xs text-gray-500 font-medium">School</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="text-brand-primary font-semibold">Home</a>
+                    <a href="about.html" class="hover:text-brand-primary transition-colors">About</a>
+                    <a href="academics.html" class="hover:text-brand-primary transition-colors">Academics</a>
+                    <a href="admissions.html" class="hover:text-brand-primary transition-colors">Admissions</a>
+                    <a href="activities.html" class="hover:text-brand-primary transition-colors">Activities</a>
+                    <a href="sports.html" class="hover:text-brand-primary transition-colors">Sports</a>
+                    <a href="contact.html" class="px-6 py-2.5 bg-gradient-to-r from-brand-primary to-brand-sage text-white font-semibold rounded-full hover:shadow-lg transition-all">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t pt-4">
+                <a href="index.html" class="block py-2 text-brand-primary font-semibold">Home</a>
+                <a href="about.html" class="block py-2 hover:text-brand-primary">About</a>
+                <a href="academics.html" class="block py-2 hover:text-brand-primary">Academics</a>
+                <a href="admissions.html" class="block py-2 hover:text-brand-primary">Admissions</a>
+                <a href="activities.html" class="block py-2 hover:text-brand-primary">Activities</a>
+                <a href="sports.html" class="block py-2 hover:text-brand-primary">Sports</a>
+                <a href="contact.html" class="block py-2 text-brand-primary font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 bg-gradient-to-r from-brand-primary to-brand-accent relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+                <span class="text-white text-xs font-bold tracking-widest uppercase">Our Story</span>
+            </div>
+            <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6 text-white">About Verulam Primary</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto">A Quintile 4 public primary school serving the Brindhaven community in Verulam, KwaZulu-Natal.</p>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="aspect-[4/3] w-full img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80" alt="Students learning" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-primary/10 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-brand-primary rounded-full"></span>
+                        <span class="text-brand-primary text-xs font-bold tracking-widest uppercase">Our Mission</span>
+                    </div>
+                    <h2 class="font-serif text-4xl font-bold mb-6 text-brand-dark">Nurturing Tomorrow's Leaders</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Verulam Primary School is a Quintile 4 public primary school serving approximately 687 learners from Grade R to Grade 7 in the Pinetown District Municipality of KwaZulu-Natal.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        We deliver the CAPS curriculum with dedication, fostering academic excellence, cultural pride, and community values in every learner.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-brand-cream rounded-2xl p-6 text-center">
+                            <p class="text-3xl font-bold text-brand-primary mb-2">687</p>
+                            <p class="text-sm text-gray-600">Learners</p>
+                        </div>
+                        <div class="bg-brand-cream rounded-2xl p-6 text-center">
+                            <p class="text-3xl font-bold text-brand-accent mb-2">R-7</p>
+                            <p class="text-sm text-gray-600">Grades</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="py-20 bg-brand-cream">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-accent/10 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-brand-accent rounded-full"></span>
+                    <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Our Values</span>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-brand-dark">What We Stand For</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Guiding principles that shape our school community.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-3xl shadow-lg p-8 text-center reveal">
+                    <div class="w-16 h-16 bg-brand-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">📚</div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-brand-dark">Excellence</h3>
+                    <p class="text-gray-600 text-sm">We strive for academic excellence and personal growth in every learner.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg p-8 text-center reveal">
+                    <div class="w-16 h-16 bg-brand-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">🤝</div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-brand-dark">Respect</h3>
+                    <p class="text-gray-600 text-sm">We honor our heritage, elders, and each other with dignity.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg p-8 text-center reveal">
+                    <div class="w-16 h-16 bg-brand-sage/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">🌱</div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-brand-dark">Integrity</h3>
+                    <p class="text-gray-600 text-sm">We build character through honesty, responsibility, and accountability.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg p-8 text-center reveal">
+                    <div class="w-16 h-16 bg-brand-terracotta/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-3xl">👨‍👩‍👧‍👦</div>
+                    <h3 class="font-serif text-xl font-bold mb-3 text-brand-dark">Community</h3>
+                    <p class="text-gray-600 text-sm">We work together with families and traditional leadership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Leadership -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-primary/10 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-brand-primary rounded-full"></span>
+                    <span class="text-brand-primary text-xs font-bold tracking-widest uppercase">Leadership</span>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-brand-dark">School Leadership</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Dedicated leaders guiding our school.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="group reveal">
+                    <div class="aspect-[3/4] img-zoom-container rounded-3xl overflow-hidden shadow-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Principal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">Principal</h3>
+                        <p class="text-brand-primary font-semibold mb-2">School Head</p>
+                        <p class="text-xs text-gray-500">Educational Leadership</p>
+                    </div>
+                </div>
+
+                <div class="group reveal">
+                    <div class="aspect-[3/4] img-zoom-container rounded-3xl overflow-hidden shadow-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Deputy Principal" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">Deputy Principal</h3>
+                        <p class="text-brand-primary font-semibold mb-2">Academic Lead</p>
+                        <p class="text-xs text-gray-500">Curriculum Management</p>
+                    </div>
+                </div>
+
+                <div class="group reveal">
+                    <div class="aspect-[3/4] img-zoom-container rounded-3xl overflow-hidden shadow-xl mb-6">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SGB Chairperson" class="w-full h-full object-cover">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">SGB Chairperson</h3>
+                        <p class="text-brand-primary font-semibold mb-2">School Governing Body</p>
+                        <p class="text-xs text-gray-500">Community Representative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-brand-primary to-brand-accent">
+        <div class="container mx-auto px-6 lg:px-12 text-center reveal">
+            <h2 class="font-serif text-4xl font-bold mb-6 text-white">Want to Learn More?</h2>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto mb-10">Discover what makes Kwamtshwili Primary special.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="academics.html" class="px-8 py-4 bg-white text-brand-primary font-bold rounded-full hover:shadow-2xl transition-all">
+                    Our Academics
+                </a>
+                <a href="contact.html" class="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-bold rounded-full hover:bg-white hover:text-brand-primary transition-all">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white">
+    <div class="container mx-auto px-6 lg:px-12 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Brand -->
+            <div class="lg:col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 bg-gradient-to-br from-brand-primary to-brand-sage text-white flex items-center justify-center font-serif font-bold text-xl rounded-lg shadow-lg">V</div>
+                    <div>
+                        <span class="font-serif text-xl font-bold block leading-tight">Verulam Primary</span>
+                        <span class="text-xs text-gray-400 tracking-wide">School</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    A Quintile 4 public primary school in Brindhaven, Verulam. Serving 687 learners with quality education and strong community values.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-9 h-9 bg-white/5 hover:bg-brand-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Facebook">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" class="w-9 h-9 bg-white/5 hover:bg-brand-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Twitter">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                    <a href="#" class="w-9 h-9 bg-white/5 hover:bg-brand-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Instagram">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-serif text-lg font-bold mb-6 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-brand-primary rounded-full"></span>
+                    Quick Links
+                </h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="about.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>About Us</a></li>
+                    <li><a href="academics.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Academics</a></li>
+                    <li><a href="admissions.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Admissions</a></li>
+                    <li><a href="activities.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Activities</a></li>
+                    <li><a href="staff.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Our Staff</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+                <h4 class="font-serif text-lg font-bold mb-6 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-brand-primary rounded-full"></span>
+                    Resources
+                </h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="students.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Student Portal</a></li>
+                    <li><a href="sports.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Sports</a></li>
+                    <li><a href="events.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Events</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-serif text-lg font-bold mb-6 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-brand-primary rounded-full"></span>
+                    Get in Touch
+                </h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3 group">
+                        <span class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">📍</span>
+                        <span class="text-gray-400 group-hover:text-white transition-colors duration-300">5 Russon Street,<br>Brindhaven, Verulam, 4013</span>
+                    </li>
+                    <li class="flex items-center gap-3 group">
+                        <span class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">📞</span>
+                        <a href="tel:0325331347" class="text-gray-400 hover:text-white transition-colors duration-300">032 533 1347</a>
+                    </li>
+                    <li class="flex items-center gap-3 group">
+                        <span class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">✉️</span>
+                        <a href="mailto:verulamprimary@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">verulamprimary@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-400 text-sm">&copy; 2026 Verulam Primary School. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-400">
+                    <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>

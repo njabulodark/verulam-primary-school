@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academics | Verulam Primary School</title>
+    <meta name="description" content="CAPS curriculum at Verulam Primary School - Quintile 4 public primary school in Brindhaven, Verulam, KwaZulu-Natal.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-primary': '#2E5C55',
+                        'brand-accent': '#D4A574',
+                        'brand-sage': '#8FBC8F',
+                        'brand-terracotta': '#C07A5A',
+                        'brand-dark': '#0F172A',
+                        'brand-cream': '#FDF8F5',
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .img-zoom-container { overflow: hidden; }
+        .img-zoom-container img { transition: transform 0.7s ease; }
+        .img-zoom-container:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="text-brand-dark antialiased bg-brand-cream">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-lg shadow-lg">
+        <div class="container mx-auto px-6 lg:px-12 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="group flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-brand-primary to-brand-sage text-white flex items-center justify-center font-serif font-bold text-xl rounded-lg shadow-md">
+                        V</div>
+                    <div>
+                        <span class="font-serif text-xl font-bold block text-brand-dark">Verulam Primary</span>
+                        <span class="text-xs text-gray-500 font-medium">School</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                    <a href="index.html" class="text-brand-primary font-semibold">Home</a>
+                    <a href="about.html" class="hover:text-brand-primary transition-colors">About</a>
+                    <a href="academics.html" class="hover:text-brand-primary transition-colors">Academics</a>
+                    <a href="admissions.html" class="hover:text-brand-primary transition-colors">Admissions</a>
+                    <a href="activities.html" class="hover:text-brand-primary transition-colors">Activities</a>
+                    <a href="sports.html" class="hover:text-brand-primary transition-colors">Sports</a>
+                    <a href="contact.html" class="px-6 py-2.5 bg-gradient-to-r from-brand-primary to-brand-sage text-white font-semibold rounded-full hover:shadow-lg transition-all">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden lg:hidden mt-4 pb-4 border-t pt-4">
+                <a href="index.html" class="block py-2 text-brand-primary font-semibold">Home</a>
+                <a href="about.html" class="block py-2 hover:text-brand-primary">About</a>
+                <a href="academics.html" class="block py-2 hover:text-brand-primary">Academics</a>
+                <a href="admissions.html" class="block py-2 hover:text-brand-primary">Admissions</a>
+                <a href="activities.html" class="block py-2 hover:text-brand-primary">Activities</a>
+                <a href="sports.html" class="block py-2 hover:text-brand-primary">Sports</a>
+                
+                <a href="contact.html" class="block py-2 text-brand-primary font-semibold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 bg-gradient-to-r from-brand-primary to-brand-sage relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-white rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-6 lg:px-12 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-6">
+                <span class="text-white text-xs font-bold tracking-widest uppercase">Academics</span>
+            </div>
+            <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6 text-white">CAPS Curriculum</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto">Following the National Curriculum Statement and Curriculum Assessment Policy Statement.</p>
+        </div>
+    </section>
+
+    <!-- Curriculum Overview -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-primary/10 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-brand-primary rounded-full"></span>
+                        <span class="text-brand-primary text-xs font-bold tracking-widest uppercase">Our Approach</span>
+                    </div>
+                    <h2 class="font-serif text-4xl font-bold mb-6 text-brand-dark">National Curriculum (CAPS)</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Verulam Primary School follows the South African National Curriculum Statement (NCS) and Curriculum and Assessment Policy Statement (CAPS), ensuring our learners meet national standards.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Verulam Primary delivers the CAPS curriculum with dedication, fostering academic excellence, cultural pride, and community values in every learner.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-brand-sage/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-brand-primary text-xl">✓</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-brand-dark">NCS / CAPS</p>
+                                <p class="text-sm text-gray-500">National standards</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-brand-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-brand-accent text-xl">✓</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-brand-dark">Mother-Tongue</p>
+                                <p class="text-sm text-gray-500">isiZulu Foundation</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-brand-terracotta/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-brand-terracotta text-xl">✓</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-brand-dark">EFAL</p>
+                                <p class="text-sm text-gray-500">English from Grade 4</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-10 h-10 bg-brand-primary/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-brand-primary text-xl">✓</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-brand-dark">Assessment</p>
+                                <p class="text-sm text-gray-500">Continuous evaluation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal">
+                    <div class="aspect-[4/3] w-full img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="https://picsum.photos/seed/curriculum/900/700" alt="CAPS Curriculum" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grade Levels -->
+    <section class="py-20 bg-brand-cream">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-accent/10 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-brand-accent rounded-full"></span>
+                    <span class="text-brand-accent text-xs font-bold tracking-widest uppercase">Grade Levels</span>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-brand-dark">Programmes by Phase</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">CAPS curriculum delivered across three learning phases.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Foundation Phase -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden reveal">
+                    <div class="aspect-[4/3] img-zoom-container">
+                        <img src="https://picsum.photos/seed/earlyyears/600/450" alt="Foundation Phase" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-gradient-to-br from-brand-sage to-brand-primary rounded-2xl flex items-center justify-center mb-4 text-3xl">🌱</div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-dark">Foundation Phase</h3>
+                        <p class="text-sm text-gray-500 mb-4">Grades R - 3 (Ages 5-9)</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Mother-tongue (isiZulu) instruction focusing on literacy, numeracy, and foundational skills through play-based learning.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-sage rounded-full"></span>
+                                Home Language Literacy
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-sage rounded-full"></span>
+                                Basic Numeracy
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-sage rounded-full"></span>
+                                Life Skills
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-sage rounded-full"></span>
+                                Social Development
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Intermediate Phase -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden reveal">
+                    <div class="aspect-[4/3] img-zoom-container">
+                        <img src="https://picsum.photos/seed/middleprimary/600/450" alt="Intermediate Phase" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-gradient-to-br from-brand-accent to-brand-terracotta rounded-2xl flex items-center justify-center mb-4 text-3xl">🌿</div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-dark">Intermediate Phase</h3>
+                        <p class="text-sm text-gray-500 mb-4">Grades 4 - 6 (Ages 10-12)</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Transition to English First Additional Language (EFAL) with specialized subjects and critical thinking development.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-accent rounded-full"></span>
+                                EFAL Introduction
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-accent rounded-full"></span>
+                                Natural Sciences
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-accent rounded-full"></span>
+                                Social Sciences
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-accent rounded-full"></span>
+                                EMS Technology
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Senior Phase -->
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden reveal">
+                    <div class="aspect-[4/3] img-zoom-container">
+                        <img src="https://picsum.photos/seed/upperprimary/600/450" alt="Senior Phase" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <div class="w-14 h-14 bg-gradient-to-br from-brand-primary to-brand-sage rounded-2xl flex items-center justify-center mb-4 text-3xl">📚</div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-dark">Senior Phase</h3>
+                        <p class="text-sm text-gray-500 mb-4">Grade 7 (Ages 13+)</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Final primary year preparing learners for secondary education with comprehensive CAPS assessment.
+                        </p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-primary rounded-full"></span>
+                                Secondary Prep
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-primary rounded-full"></span>
+                                Mathematics
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-primary rounded-full"></span>
+                                Languages
+                            </li>
+                            <li class="flex items-center gap-2 text-sm text-gray-600">
+                                <span class="w-2 h-2 bg-brand-primary rounded-full"></span>
+                                Assessment
+                            </li>
+                        </ul>
+                        <a href="#" class="inline-flex items-center gap-2 text-brand-primary font-semibold hover:gap-3 transition-all">
+                            Learn More
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="text-center mb-16 reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-sage/10 rounded-full mb-6">
+                    <span class="w-2 h-2 bg-brand-sage rounded-full"></span>
+                    <span class="text-brand-sage text-xs font-bold tracking-widest uppercase">Subjects</span>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 text-brand-dark">Core Subject Areas</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">A comprehensive curriculum covering all essential learning areas.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-brand-cream rounded-2xl p-6 text-center reveal">
+                    <span class="text-4xl mb-3 block">📖</span>
+                    <h3 class="font-semibold text-brand-dark">English</h3>
+                    <p class="text-sm text-gray-500 mt-1">Language Arts</p>
+                </div>
+                <div class="bg-brand-cream rounded-2xl p-6 text-center reveal">
+                    <span class="text-4xl mb-3 block">🔢</span>
+                    <h3 class="font-semibold text-brand-dark">Mathematics</h3>
+                    <p class="text-sm text-gray-500 mt-1">Numeracy</p>
+                </div>
+                <div class="bg-brand-cream rounded-2xl p-6 text-center reveal">
+                    <span class="text-4xl mb-3 block">🔬</span>
+                    <h3 class="font-semibold text-brand-dark">Science</h3>
+                    <p class="text-sm text-gray-500 mt-1">Discovery</p>
+                </div>
+                <div class="bg-brand-cream rounded-2xl p-6 text-center reveal">
+                    <span class="text-4xl mb-3 block">🌍</span>
+                    <h3 class="font-semibold text-brand-dark">Social Studies</h3>
+                    <p class="text-sm text-gray-500 mt-1">Humanities</p>
+                </div>
+                <div class="bg-brand-cream rounded-2xl p-6 text-center reveal">
+                    <span class="text-4xl mb-3 block">💻</span>
+                    <h3 class="font-semibold text-brand-dark">ICT</h3>
+                    <p class="text-sm text-gray-500 mt-1">Technology</p>
+                </div>
+                <div class="bg-brand-cream rounded-2xl p-6 text-center reveal">
+                    <span class="text-4xl mb-3 block">🎨</span>
+                    <h3 class="font-semibold text-brand-dark">Art</h3>
+                    <p class="text-sm text-gray-500 mt-1">Creative Arts</p>
+                </div>
+                <div class="bg-brand-cream rounded-2xl p-6 text-center reveal">
+                    <span class="text-4xl mb-3 block">🎵</span>
+                    <h3 class="font-semibold text-brand-dark">Music</h3>
+                    <p class="text-sm text-gray-500 mt-1">Performing Arts</p>
+                </div>
+                <div class="bg-brand-cream rounded-2xl p-6 text-center reveal">
+                    <span class="text-4xl mb-3 block">🏃</span>
+                    <h3 class="font-semibold text-brand-dark">Physical Ed</h3>
+                    <p class="text-sm text-gray-500 mt-1">Sports & Health</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assessment -->
+    <section class="py-20 bg-brand-cream">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <div class="aspect-[4/3] w-full img-zoom-container rounded-3xl shadow-2xl">
+                        <img src="https://picsum.photos/seed/assessment/900/700" alt="Assessment" class="w-full h-full object-cover rounded-3xl">
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-brand-terracotta/10 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-brand-terracotta rounded-full"></span>
+                        <span class="text-brand-terracotta text-xs font-bold tracking-widest uppercase">Assessment</span>
+                    </div>
+                    <h2 class="font-serif text-4xl font-bold mb-6 text-brand-dark">Tracking Progress</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        We use a variety of assessment methods to monitor student progress and inform teaching. Our approach balances formal examinations with ongoing formative assessment.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-brand-primary font-bold">1</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-brand-dark mb-1">Formative Assessment</h3>
+                                <p class="text-sm text-gray-600">Ongoing checks for understanding through quizzes, observations, and classwork.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-brand-accent font-bold">2</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-brand-dark mb-1">Summative Assessment</h3>
+                                <p class="text-sm text-gray-600">End-of-term examinations and projects that evaluate cumulative learning.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-brand-sage font-bold">3</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-brand-dark mb-1">Progress Reports</h3>
+                                <p class="text-sm text-gray-600">Detailed termly reports with grades and teacher comments for parents.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-brand-primary to-brand-sage">
+        <div class="container mx-auto px-6 lg:px-12 text-center reveal">
+            <h2 class="font-serif text-4xl font-bold mb-6 text-white">Interested in Our Curriculum?</h2>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto mb-10">Schedule a visit to see our classrooms in action and meet our teaching staff.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="admissions.html" class="px-8 py-4 bg-white text-brand-primary font-bold rounded-full hover:shadow-2xl transition-all">
+                    Admissions Info
+                </a>
+                <a href="contact.html" class="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/30 text-white font-bold rounded-full hover:bg-white hover:text-brand-primary transition-all">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white">
+    <div class="container mx-auto px-6 lg:px-12 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            <!-- Brand -->
+            <div class="lg:col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-11 h-11 bg-gradient-to-br from-brand-primary to-brand-sage text-white flex items-center justify-center font-serif font-bold text-xl rounded-lg shadow-lg">V</div>
+                    <div>
+                        <span class="font-serif text-xl font-bold block leading-tight">Verulam Primary</span>
+                        <span class="text-xs text-gray-400 tracking-wide">School</span>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                    A Quintile 4 public primary school in Brindhaven, Verulam, KwaZulu-Natal. Delivering CAPS curriculum with dedication and community support.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-9 h-9 bg-white/5 hover:bg-brand-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Facebook">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="#" class="w-9 h-9 bg-white/5 hover:bg-brand-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Twitter">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                    <a href="#" class="w-9 h-9 bg-white/5 hover:bg-brand-primary rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110" aria-label="Instagram">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div>
+                <h4 class="font-serif text-lg font-bold mb-6 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-brand-primary rounded-full"></span>
+                    Quick Links
+                </h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="about.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>About Us</a></li>
+                    <li><a href="academics.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Academics</a></li>
+                    <li><a href="admissions.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Admissions</a></li>
+                    <li><a href="activities.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Activities</a></li>
+                    <li><a href="staff.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Our Staff</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div>
+                <h4 class="font-serif text-lg font-bold mb-6 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-brand-primary rounded-full"></span>
+                    Resources
+                </h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="students.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Student Portal</a></li>
+                    <li><a href="sports.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Sports</a></li>
+                    <li><a href="events.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Events</a></li>
+                    <li><a href="contact.html" class="text-gray-400 hover:text-brand-primary transition-colors duration-300 flex items-center gap-2 group"><span class="w-0 group-hover:w-2 h-0.5 bg-brand-primary transition-all duration-300"></span>Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="font-serif text-lg font-bold mb-6 flex items-center gap-2">
+                    <span class="w-1 h-5 bg-brand-primary rounded-full"></span>
+                    Get in Touch
+                </h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3 group">
+                        <span class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">📍</span>
+                        <span class="text-gray-400 group-hover:text-white transition-colors duration-300">5 Russon Street,<br>Brindhaven, Verulam, 4013</span>
+                    </li>
+                    <li class="flex items-center gap-3 group">
+                        <span class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">📞</span>
+                        <a href="tel:0325331347" class="text-gray-400 hover:text-white transition-colors duration-300">032 533 1347</a>
+                    </li>
+                    <li class="flex items-center gap-3 group">
+                        <span class="w-8 h-8 bg-white/5 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-brand-primary transition-colors duration-300">✉️</span>
+                        <a href="mailto:verulamprimary@gmail.com" class="text-gray-400 hover:text-white transition-colors duration-300">verulamprimary@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 mt-12 pt-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-400 text-sm">&copy; 2026 Verulam Primary School. All rights reserved.</p>
+                <div class="flex gap-6 text-sm text-gray-400">
+                    <a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors duration-300">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', reveal);
+        reveal();
+    </script>
+</body>
+</html>
